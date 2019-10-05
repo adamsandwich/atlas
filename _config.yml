@@ -11,8 +11,8 @@ menu:
 
 # stylesheets loaded in the <head>
 stylesheets:
--
+- /scripts/atlas.css
 
 # scripts loaded in the end of the body
 scripts:
-- /scripts/index.js
+- /scripts/atlas.js
