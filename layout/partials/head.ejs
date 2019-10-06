@@ -1,0 +1,29 @@
+<% var pageTitle = page.title || config.title || ''; %>
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="google-site-verification" content="<%=config.google_site_verification%>" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="description" content="<%=config.description%>">
+  <meta name="keywords" content="<%=config.keywords%>">
+  <meta property="og:title" content="<%=pageTitle%>">
+  <meta property="og:type" content="article">
+  <% if (is_post() && page.tags && page.tags.length) { %>
+    <% page.tags.forEach(tag => { %>
+      <meta property="article:tag" content="<%=tag.name%>">
+    <% }); %>
+  <% } %>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%=page.permalink%>">
+  <meta property="og:site_name" content="<%=config.title%>">
+  <title><%=pageTitle%></title>
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from _config.yml -->
+    <% theme.stylesheets.forEach(url => { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+</head>
