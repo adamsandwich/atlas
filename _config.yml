@@ -16,3 +16,5 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /scripts/atlas.js
+
+disqus: adamsandwich

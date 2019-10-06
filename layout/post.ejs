@@ -10,7 +10,7 @@
         <article class="article">
         <%- page.content %>
         </article>
-        <!-- <% if (page.comments) { %>
+        <% if (page.comments) { %>
         <div class="post article" id="disqus_thread"></div>
         <script>
           // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -23,12 +23,12 @@
 
           (function () { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
-            s.src = 'https://adamsandwich.disqus.com/embed.js';
+            s.src = 'https://<%=config.disqus%>.disqus.com/embed.js';
             s.setAttribute('data-timestamp', + new Date());
             (d.head || d.body).appendChild(s);
           })();
         </script>
-        <% } %> -->
+        <% } %>
       </div>
     </div>
     <div class="pager">
