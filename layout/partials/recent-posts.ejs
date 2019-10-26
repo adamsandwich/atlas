@@ -3,7 +3,7 @@
 
 <% if (page.posts.length > 0) {%>
   <div  class="container portrait" id="recent-posts">
-    <% page.posts.sort('date', -1).limit(10).each(post => { %>
+    <% page.posts.sort('date', -1).limit(config.index_generator.per_page).each(post => { %>
       <div class="card">
         <a href="<%=url_for(post.path)%>">
           <h1><%=post.title%></h1>

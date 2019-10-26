@@ -2,5 +2,9 @@
 <%-partial('partials/recent-posts')%>
 
 <div id="paginator">
-  <%-paginator()%>
+  <%- paginator({
+    total: site.posts.length/config.index_generator.per_page,
+    prev_text: '<',
+    next_text: '>'
+    }) %>
 </div>
