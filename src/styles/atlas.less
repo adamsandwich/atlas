@@ -479,15 +479,9 @@ body {
     text-decoration: none;
   }
 
-  .page-number {
-    width: 1.5rem;
-    height: 1.5rem;
-    text-align: center;
-    display: inline-block;
-    line-height: 1.5rem;
-    border-radius: 50%;
-  }
-
+  .page-number,
+  .extend,
+  .prev,
   .next {
     width: 1.5rem;
     height: 1.5rem;
@@ -495,9 +489,12 @@ body {
     display: inline-block;
     line-height: 1.5rem;
     border-radius: 50%;
+    margin-right: 1rem;
   }
 
-  .current {
-    background-color: rgba(0, 0, 0, 0.08);
+  .current,
+  .current:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
   }
 }
