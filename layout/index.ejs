@@ -3,7 +3,7 @@
 
 <div id="paginator">
   <%- paginator({
-    total: site.posts.length/config.index_generator.per_page,
+    total: Math.ceil(site.posts.length/config.index_generator.per_page),
     prev_text: '<',
     next_text: '>'
     }) %>
