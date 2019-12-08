@@ -12,6 +12,14 @@ body {
   font-family: Sarasa-Mono-SC !important;
 }
 
+a,
+a:hover,
+a:link,
+a:visited {
+  color: #9aa0a6;
+  text-decoration: none;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #9aa0a6;
@@ -51,6 +59,10 @@ body {
   #disqus_thread {
     background-color: #9aa0a6;
   }
+
+  .tag {
+    background-color: #444;
+  }
 }
 
 @media (prefers-color-scheme: light),
@@ -62,6 +74,10 @@ body {
 
   .card {
     background-color: rgb(255, 255, 255);
+
+    .content {
+      color: #999;
+    }
   }
 
   .card>a {
@@ -87,6 +103,20 @@ body {
       background-color: #ffffff;
       color: #666666;
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .tag {
+    background-color: rgb(242, 242, 242);
+    color: #666;
+  }
+
+  #tags {
+    .title {
+      color: #333;
+    }
+    .time{
+      color: #333;
     }
   }
 }
@@ -570,5 +600,24 @@ body {
   .current,
   .current:hover {
     cursor: pointer;
+  }
+}
+
+.tags {
+  margin-bottom: 1em;
+}
+
+.tag {
+  border-radius: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.6rem;
+  height: 1.8rem;
+}
+
+#tags {
+  h1 {
+    text-align: center;
   }
 }
