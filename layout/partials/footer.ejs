@@ -1,18 +1,18 @@
 <footer class="container portrait footer" id="footer">
-  <p class="footer--center">
+  <p class="center">
     Copyright &copy; <%-config.author%> <%- date(Date.now(), 'YYYY') %>
   </p>
   <div id="slogons">
     <% config.slogons.forEach(function(slogon, i) { %>
-      <p class="footer--center displayNone">
+      <p class="center displayNone">
         <%- slogon %>
       </p>
     <% }) %>
   </div>
-  <p class="footer--center">
+  <p class="center">
     阿罗拉ICP备以太乐园号-6
   </p>
-  <p class="footer--center">
+  <p class="center">
     Powered by Hexo and <a href="https://adamsandwich.com">Adamsandwich</a> | Theme <a href="https://github.com/adamsandwich/atlas">Atlas</a>
   </p>
 </footer>

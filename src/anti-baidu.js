@@ -15,15 +15,15 @@
     dialog.className = "dialog";
     dialog.id = "anti-baidu-dialog";
     dialog.innerHTML = `
-      <div class="dialog--mask"></div>
-      <div class="dialog--content">
-        <div class="dialog--content--title">
+      <div class="mask"></div>
+      <div class="content">
+        <div class="title">
           <p>警告</p>
         </div>
-        <div class="dialog--content--description">
+        <div class="description">
           <p>检测到你还在使用百度这个搜索引擎。<br>作为一个程序员，这是一种自暴自弃！</p>
         </div>
-        <div class="dialog--content--footer">
+        <div class="footer">
           <button id="anti-baidu-dialog-button">
             <span>关闭</span>
           </button>
