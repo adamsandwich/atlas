@@ -6,11 +6,13 @@
     <% page.posts.sort('date', -1).limit(config.index_generator.per_page).each(post => { %>
       <div class="card">
         <a href="<%=url_for(post.path)%>">
-          <h1><%=post.title%></h1>
-          <% if (post.subtitle) { %>
-          <h2><%=post.subtitle%></h2>
-          <% } %>
-          <h3><%=date(post.date)%></h3>
+          <hgroup>
+            <h1><%=post.title%></h1>
+            <% if (post.subtitle) { %>
+            <h2><%=post.subtitle%></h2>
+            <% } %>
+            <h3><%=date(post.date)%><span class="post-count"> · <%= min2read(post.content, {cn: 150, en: 100}) %> min read</span></h3>
+          </hgroup>
           <div class="tags">
             <% if (post.tags && post.tags.length > 0){ %>
               <% post.tags.each(tag => { %>

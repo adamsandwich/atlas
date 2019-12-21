@@ -2,7 +2,13 @@
   <div class="container portrait mask">
     <div class="header">
       <h1><% if (page.title) { %> <%=page.title%> <% } else { %> <%=config.title%> <% } %></h1>
-      <span><% if (page.subtitle) { %> <%=page.subtitle%> <% } %></span>
-      <span><%=config.description%></span>
+      <% if (page.subtitle) { %>
+        <span><%=page.subtitle%></span>
+      <% } else { %>
+        <span><%=config.description%></span>
+      <% } %>
+      <% if (is_post()) { %>
+        <span class="post-count"> · <%= min2read(page.content, {cn: 150, en: 100}) %> min read</span>
+      <% } %>
     </div>
 </header>
